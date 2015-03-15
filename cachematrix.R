@@ -43,6 +43,22 @@ cacheSolve <- function(x, ...) {
        x$setinverse(i) 
        i 
    } 
+   
+   ## below shows how it is tested
+   ## mdat <- matrix(c(4,12, 6,13), nrow = 2, ncol = 2, byrow = TRUE, dimnames = list(c("row1", "row2"), c("C.1", "C.2"))) 
+   ## mdat
+##     C.1 C.2
+## row1   4  12
+## row2   6  13
 
+## c<-makeCacheMatrix(mdat)
+## > c$get()
+##     C.1 C.2
+## row1   4  12
+## row2   6  13
+## > cacheSolve(c)
+##     row1 row2
+## C.1 -0.65  0.6
+## C.2  0.30 -0.2
 
 
